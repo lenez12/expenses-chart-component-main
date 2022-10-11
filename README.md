@@ -49,8 +49,8 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- Source Code URL: [Source Github](https://github.com/lenez12/Single-price-grid-component.git)
-- Live Site URL: [Demo Live](https://lenez-single-price.netlify.app/)
+- Source Code URL: [Source Github](https://github.com/lenez12/expenses-chart-component-main.git)
+- Live Site URL: [Demo Live](https://lenez-chart-expenses.netlify.app/)
 
 ## My process
 
@@ -60,6 +60,8 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 - CSS custom properties
 - Flexbox
 - Grid CSS
+- SCSS
+- CSS5 Animation
 
 ### What I learned
 
@@ -67,19 +69,23 @@ what I learned in making this challenge is:
 
 1. using grid css for layouting content
 2. i user media Query to build responsive for mobile combinating with grid css
+3. using animation
+4. get data using fetch
+5. manipulate dom
 
 ### Continued development
 
 1. In the future I will make a good css class naming name
 2. add transition and animation on content when appears
+3. semantic tag
 
 ### Useful resources
 
 - [CSS Grid Layout](https://www.w3schools.com/css/css_grid.asp)
-- [Reset CSS](https://piccalil.li/blog/a-modern-css-reset/)
+- [Reset CSS](https://nicolas-cusan.github.io/destyle.css/)
 
 ## Author
 
-- Frontend Mentor - [@Lenez](https://www.frontendmentor.io/profile/lenez)
+- Frontend Mentor - [@Lenez](https://www.frontendmentor.io/profile/lenez12)
 - Twitter - [@prak_tech](https://www.twitter.com/prak_tech)
 

@@ -3,51 +3,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 	const data = await getData();
 
-	const datass = [
-		{
-			id: 1,
-			value: 3,
-			text: "10.23",
-			label: "mon",
-		},
-		{
-			id: 2,
-			value: 6,
-			text: "40.11",
-			label: "tue",
-		},
-		{
-			id: 3,
-			value: 10,
-			text: "52.36",
-			label: "wed",
-		},
-		{
-			id: 4,
-			value: 5,
-			text: "31.07",
-			label: "thu",
-		},
-		{
-			id: 5,
-			value: 4,
-			text: "21.12",
-			label: "fri",
-		},
-		{
-			id: 6,
-			value: 7,
-			text: "45.36",
-			label: "sat",
-		},
-		{
-			id: 7,
-			value: 5.5,
-			text: "34.23",
-			label: "sun",
-		},
-	];
-
 	const datas = data.map((item) => item.amount);
 	const maxValue = Math.max(...datas);
 	var width = window.innerWidth > 0 ? window.innerWidth : screen.width;
@@ -63,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             <div class="bar max" style="height: calc(${
 							item.amount / 10
 						}rem*2);"></div>
-            <p>${item.label}</p>`;
+            <p>${item.day}</p>`;
 		} else {
 			barWrapper.innerHTML = `
             <span class="bounceInUp">$${item.amount}</span>
