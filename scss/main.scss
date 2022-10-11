@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+// LAYOUT
+$mobile-layout: 375px;
+$dexktop-layout: 1440px;
+
+// COLOR
+
+// Primary
+$soft-red-color: hsl(10, 79%, 65%);
+$cyan-color: hsl(186, 34%, 60%);
+
+// Neutreal
+$dark-brown-color: hsl(25, 47%, 15%);
+$medium-brown-color: hsl(28, 10%, 53%);
+$cream-color: hsl(27, 66%, 92%);
+$very-pale-orange: hsl(33, 100%, 98%);
+
+// TYPOGRAPHY
+$normal-font-size: 18px;
+
+//Font weight
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$dm-sans-font-family: "DM Sans", sans-serif;
+
+body {
+	font-size: $normal-font-size;
+	font-family: $dm-sans-font-family;
+	background-color: $cream-color;
+	padding: 0.5rem;
+	min-height: 100vh;
+	max-height: 900px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 350px;
+	margin: 0 auto;
+	.header {
+		background-color: $soft-red-color;
+		color: $very-pale-orange;
+		padding: 1.2rem 1.5rem;
+		border-radius: 0.5rem;
+		margin-bottom: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.balance {
+			p {
+				font-size: 0.9rem;
+				margin-bottom: 0.5rem;
+			}
+			span {
+				font-weight: $font-weight-bold;
+				font-size: 1.5rem;
+			}
+		}
+		img {
+			height: 2.5rem;
+		}
+	}
+
+	.content {
+		background-color: $very-pale-orange;
+		padding: 1.5rem;
+		border-radius: 0.5rem;
+
+		h1 {
+			color: $dark-brown-color;
+			font-size: 1.5rem;
+			font-weight: $font-weight-bold;
+			margin-bottom: 3rem;
+		}
+
+		.chart {
+			width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: flex-end;
+			min-height: 10rem;
+			margin-bottom: 1rem;
+			.bar-wrapper {
+				width: 3rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				flex-direction: column;
+
+				span {
+					padding: 0.4rem;
+					background-color: $dark-brown-color;
+					display: block;
+					color: $very-pale-orange;
+					border-radius: 4px;
+					font-size: 12px;
+					position: absolute;
+					bottom: calc(100% + 0.5rem);
+					display: none;
+				}
+
+				.bar {
+					width: 2.2rem;
+					height: 0rem;
+					background-color: $soft-red-color;
+					border-radius: 0.2rem;
+					margin-bottom: 0.5rem;
+					animation: yourAnimation 1s linear 0.3s 1 normal none;
+					transition: 0.3s;
+				}
+
+				.bar:active {
+					background-color: lighten($soft-red-color, 12%);
+					transform: scaleX(1.2);
+				}
+				.active {
+					display: block;
+				}
+				.bar.max {
+					background-color: $cyan-color;
+				}
+
+				.bar.max:active {
+					background-color: lighten($cyan-color, 12%);
+					cursor: pointer;
+				}
+
+				p {
+					font-size: 0.7rem;
+					display: inline;
+					color: $medium-brown-color;
+					margin: 0 auto;
+				}
+			}
+			.bar-wrapper:active span {
+				display: block;
+			}
+		}
+
+		.devider {
+			height: 2px;
+			width: 100%;
+			background-color: $cream-color;
+			margin-bottom: 1rem;
+		}
+		.footer {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			p {
+				color: $medium-brown-color;
+				font-size: 0.9rem;
+			}
+
+			span {
+				color: $dark-brown-color;
+			}
+
+			.total {
+				p {
+					margin-bottom: 0.5rem;
+				}
+				span {
+					font-size: 1.7rem;
+					font-weight: $font-weight-bold;
+				}
+			}
+
+			.percentate {
+				span {
+					font-weight: $font-weight-bold;
+					text-align: end;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		width: 512px;
+		margin: 0 auto;
+		.header {
+			background-color: $soft-red-color;
+			color: $very-pale-orange;
+			padding: 1.5rem 1.5rem;
+			border-radius: 1rem;
+			margin-bottom: 1rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.balance {
+				p {
+					font-size: 1rem;
+					margin-bottom: 0.6rem;
+				}
+				span {
+					font-weight: $font-weight-bold;
+					font-size: 1.7rem;
+				}
+			}
+			img {
+				height: 3rem;
+			}
+		}
+
+		.content {
+			background-color: $very-pale-orange;
+			padding: 1.5rem;
+			border-radius: 0.5rem;
+
+			h1 {
+				color: $dark-brown-color;
+				font-size: 2rem;
+				font-weight: $font-weight-bold;
+				margin-bottom: 3rem;
+			}
+
+			.chart {
+				width: 100%;
+				display: flex;
+				justify-content: space-evenly;
+				align-items: flex-end;
+				min-height: 13rem;
+				margin-bottom: 1rem;
+				.bar-wrapper {
+					width: 5rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: relative;
+					flex-direction: column;
+
+					span {
+						padding: 0.5rem;
+						background-color: $dark-brown-color;
+						display: block;
+						color: $very-pale-orange;
+						border-radius: 4px;
+						font-size: 20px;
+						position: absolute;
+						bottom: calc(100% + 0.5rem);
+						display: none;
+					}
+
+					.bar {
+						width: 3.2rem;
+						height: 0rem;
+						background-color: $soft-red-color;
+						border-radius: 0.2rem;
+						margin-bottom: 0.5rem;
+						animation: yourAnimation 1s linear 0.3s 1 normal none;
+						transition: 0.3s;
+					}
+
+					.bar:hover {
+						background-color: lighten($soft-red-color, 12%);
+						transform: scaleX(1.1);
+						cursor: pointer;
+					}
+					.active {
+						display: block;
+					}
+					.bar.max {
+						background-color: $cyan-color;
+					}
+
+					.bar.max.active {
+						display: block;
+					}
+
+					.bar.max:hover {
+						background-color: lighten($cyan-color, 12%);
+						cursor: pointer;
+					}
+
+					p {
+						font-size: 1rem;
+						display: inline;
+						color: $medium-brown-color;
+						margin: 0 auto;
+					}
+				}
+				.bar-wrapper:hover span {
+					display: block;
+				}
+			}
+
+			.devider {
+				height: 3px;
+				width: 100%;
+				background-color: $cream-color;
+				margin-bottom: 1rem;
+			}
+			.footer {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				p {
+					color: $medium-brown-color;
+					font-size: 1.2rem;
+				}
+
+				span {
+					color: $dark-brown-color;
+				}
+
+				.total {
+					p {
+						margin-bottom: 0.7rem;
+					}
+					span {
+						font-size: 3rem;
+						font-weight: $font-weight-bold;
+					}
+				}
+
+				.percentate {
+					span {
+						font-weight: $font-weight-bold;
+						font-size: 1.3rem;
+						margin-bottom: 0.3rem;
+						text-align: end;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

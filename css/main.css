@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+body {
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(27deg, 66%, 92%);
+  padding: 0.5rem;
+  min-height: 100vh;
+  max-height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 350px;
+  margin: 0 auto;
+}
+.container .header {
+  background-color: hsl(10deg, 79%, 65%);
+  color: hsl(33deg, 100%, 98%);
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header .balance p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.container .header .balance span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.container .header img {
+  height: 2.5rem;
+}
+.container .content {
+  background-color: hsl(33deg, 100%, 98%);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.container .content h1 {
+  color: hsl(25deg, 47%, 15%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.container .content .chart {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  min-height: 10rem;
+  margin-bottom: 1rem;
+}
+.container .content .chart .bar-wrapper {
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+.container .content .chart .bar-wrapper span {
+  padding: 0.4rem;
+  background-color: hsl(25deg, 47%, 15%);
+  display: block;
+  color: hsl(33deg, 100%, 98%);
+  border-radius: 4px;
+  font-size: 12px;
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  display: none;
+}
+.container .content .chart .bar-wrapper .bar {
+  width: 2.2rem;
+  height: 0rem;
+  background-color: hsl(10deg, 79%, 65%);
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
+  -webkit-animation: yourAnimation 1s linear 0.3s 1 normal none;
+          animation: yourAnimation 1s linear 0.3s 1 normal none;
+  transition: 0.3s;
+}
+.container .content .chart .bar-wrapper .bar:active {
+  background-color: #f3a596;
+  transform: scaleX(1.2);
+}
+.container .content .chart .bar-wrapper .active {
+  display: block;
+}
+.container .content .chart .bar-wrapper .bar.max {
+  background-color: hsl(186deg, 34%, 60%);
+}
+.container .content .chart .bar-wrapper .bar.max:active {
+  background-color: #9fcbd0;
+  cursor: pointer;
+}
+.container .content .chart .bar-wrapper p {
+  font-size: 0.7rem;
+  display: inline;
+  color: hsl(28deg, 10%, 53%);
+  margin: 0 auto;
+}
+.container .content .chart .bar-wrapper:active span {
+  display: block;
+}
+.container .content .devider {
+  height: 2px;
+  width: 100%;
+  background-color: hsl(27deg, 66%, 92%);
+  margin-bottom: 1rem;
+}
+.container .content .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.container .content .footer p {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 0.9rem;
+}
+.container .content .footer span {
+  color: hsl(25deg, 47%, 15%);
+}
+.container .content .footer .total p {
+  margin-bottom: 0.5rem;
+}
+.container .content .footer .total span {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.container .content .footer .percentate span {
+  font-weight: 700;
+  text-align: end;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 512px;
+    margin: 0 auto;
+  }
+  .container .header {
+    background-color: hsl(10deg, 79%, 65%);
+    color: hsl(33deg, 100%, 98%);
+    padding: 1.5rem 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container .header .balance p {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+  .container .header .balance span {
+    font-weight: 700;
+    font-size: 1.7rem;
+  }
+  .container .header img {
+    height: 3rem;
+  }
+  .container .content {
+    background-color: hsl(33deg, 100%, 98%);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  .container .content h1 {
+    color: hsl(25deg, 47%, 15%);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  .container .content .chart {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    min-height: 13rem;
+    margin-bottom: 1rem;
+  }
+  .container .content .chart .bar-wrapper {
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+  }
+  .container .content .chart .bar-wrapper span {
+    padding: 0.5rem;
+    background-color: hsl(25deg, 47%, 15%);
+    display: block;
+    color: hsl(33deg, 100%, 98%);
+    border-radius: 4px;
+    font-size: 20px;
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    display: none;
+  }
+  .container .content .chart .bar-wrapper .bar {
+    width: 3.2rem;
+    height: 0rem;
+    background-color: hsl(10deg, 79%, 65%);
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
+    -webkit-animation: yourAnimation 1s linear 0.3s 1 normal none;
+            animation: yourAnimation 1s linear 0.3s 1 normal none;
+    transition: 0.3s;
+  }
+  .container .content .chart .bar-wrapper .bar:hover {
+    background-color: #f3a596;
+    transform: scaleX(1.1);
+    cursor: pointer;
+  }
+  .container .content .chart .bar-wrapper .active {
+    display: block;
+  }
+  .container .content .chart .bar-wrapper .bar.max {
+    background-color: hsl(186deg, 34%, 60%);
+  }
+  .container .content .chart .bar-wrapper .bar.max.active {
+    display: block;
+  }
+  .container .content .chart .bar-wrapper .bar.max:hover {
+    background-color: #9fcbd0;
+    cursor: pointer;
+  }
+  .container .content .chart .bar-wrapper p {
+    font-size: 1rem;
+    display: inline;
+    color: hsl(28deg, 10%, 53%);
+    margin: 0 auto;
+  }
+  .container .content .chart .bar-wrapper:hover span {
+    display: block;
+  }
+  .container .content .devider {
+    height: 3px;
+    width: 100%;
+    background-color: hsl(27deg, 66%, 92%);
+    margin-bottom: 1rem;
+  }
+  .container .content .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .container .content .footer p {
+    color: hsl(28deg, 10%, 53%);
+    font-size: 1.2rem;
+  }
+  .container .content .footer span {
+    color: hsl(25deg, 47%, 15%);
+  }
+  .container .content .footer .total p {
+    margin-bottom: 0.7rem;
+  }
+  .container .content .footer .total span {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .container .content .footer .percentate span {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    text-align: end;
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */
